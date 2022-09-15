@@ -68,11 +68,23 @@
 									src="images/fulls/PSM-visual.PNG" alt="Visual Attention Modulated Virtual Saliency" />
 							</article>
 							
+							<p> Below are results from optimizing the parametric saliency maps model to more closely resemble SALICON, a state of the art saliency model. Optimization was done using the CMA-ES algorithm. Three loss functions were experimented with across three objective functions (9 objective/loss pairs), based on saliency metrics of SIM score and KL-Divergence which measure the similarity of distributions and are a good co-pair of metrics due to complementary features. Points represent comparisons between pairs of generated parametric saliency maps and generated SALICON saliency maps. Orange points are like-pairs, corresponding to the same visual input. Blue points are unlike-pairs. Optimization resulted in clear strong separability of like-pairs from unlike-pairs, despite the parametric model having only 7 degrees of freedom. Interestingly, even the unoptimized baseline shows some inherent structural differences of like-pairs from unlike-pairs, which suggests the choice of attention parameters themselves encode a good deal of what machine learning trained models are encoding. Further investigation would be needed to confirm this.
+							</p>
+							
+							<article class="col-12 col-12-small work-item">
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/fulls/SVM Plot (Baseline).PNG" alt="Basline" />
+							</article>
+							<article class="col-12 col-12-small work-item">
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/fulls/SVM Plot (KL-SIM-SRMS).PNG" alt="Optimized" />
+							</article>
+							<!--
 							<p>Below is a video showcasing a dynamic octree implementation to speed up neighbour search, which is a bottleneck in our algorithm. It is implemented almost entirely in C++. In order to work around Unreal's poor C++ documentation, I frequently consulted and searched through engine code. It supports 3D neighbour search. An octree could also be used to allow pathfinding in 3D. Note that performance is impacted by the recording software as well as the age of my laptop, which is several years old at the time of recording. On this machine, the octree implementation led to a 25% increase in performance compared to our previous sphere trace approach. On a modern machine, we can simulate up to 2000 agents before performance drops. Further optimization is still in progress.</p>
 
 							<iframe width="560" height="315" src="https://www.youtube.com/embed/mVXNYRkGnXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>
 							<p>If your browser does not support embedded videos, <a href="https://youtu.be/mVXNYRkGnXg" target="_blank">click here</a> to view on YouTube.</p>
-							
+							-->
 
 							<h2>Crowd Generation Tool (Unity)</h2>
 							<p>An editor tool I implemented in Unity to help the research team generate crowds. It includes functionality for generating agents, saving data and statistics, loading previously recorded simulations, and more.</p>
