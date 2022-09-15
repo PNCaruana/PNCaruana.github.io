@@ -55,13 +55,17 @@
 							<h2>RECENT WORK</h2>
 						</header>
 						<div class="row">
-							<h2>Parametric Saliency Maps</h2>
-							<p>The focus of my masters thesis was a framework for incorporating distracted pedestrians into crowd simulations in Unity (C#) and later was ported to Unreal Engine 4. The Predictive Avoidance Model (PAM) is used as a steering algorithm with distracted behaviour layered on top using behaviour trees.</p>
-							<p>Methodologies used: Unreal Engine 4 (blueprints and C++) and Unity (C#), software prototyping, usability testing, experiment piloting.</p>
+							<h2>Parametric Saliency Maps for Autonomous Pedestrians</h2>
+							<p>The focus of my masters thesis was a framework for generating "psuedo" saliency maps in Unity (C#). The parametric model is implemented in a shader (HLSL), which incorporates 7 attention factors in order to generate 2D saliency maps in runtime from the perspective of a virtual agent.</p>
+							<p>Methodologies used: Unity (C#), software prototyping, parameter optimization, usability testing, experiment piloting.</p>
 
 							<article class="col-12 col-12-small work-item">
 									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/fulls/distracted-sim.jpg" alt="Distracted Pedestrians" />
+									src="images/fulls/PSM-factors.PNG" alt="Virtual Saliency" />
+							</article>
+							<article class="col-12 col-12-small work-item">
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/fulls/PSM-visual.PNG" alt="Visual Attention Modulated Virtual Saliency" />
 							</article>
 							
 							<p>Below is a video showcasing a dynamic octree implementation to speed up neighbour search, which is a bottleneck in our algorithm. It is implemented almost entirely in C++. In order to work around Unreal's poor C++ documentation, I frequently consulted and searched through engine code. It supports 3D neighbour search. An octree could also be used to allow pathfinding in 3D. Note that performance is impacted by the recording software as well as the age of my laptop, which is several years old at the time of recording. On this machine, the octree implementation led to a 25% increase in performance compared to our previous sphere trace approach. On a modern machine, we can simulate up to 2000 agents before performance drops. Further optimization is still in progress.</p>
@@ -89,19 +93,6 @@
 							<article class="col-12 col-12-small work-item">
 									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
 									src="images/fulls/visual-textures.PNG" alt="Visual Attention Field" />
-							</article>
-
-							<h2>Parametric Saliency Maps for Virtual Agents </h2>
-							<p>Visual attention and saliency system for virtual agents implemented as a shader (HLSL) in Unity, using the visual attention textures from the previous project to modulate saliency across the visual field.</p>
-							<p>Methodologies used: Unity (C#),  software prototyping, usability testing, experiment piloting</p>
-
-							<article class="col-12 col-12-small work-item">
-									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/fulls/PSM-factors.PNG" alt="Virtual Saliency" />
-							</article>
-							<article class="col-12 col-12-small work-item">
-									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/fulls/PSM-visual.PNG" alt="Visual Attention Modulated Virtual Saliency" />
 							</article>
 
 							<h2>Car following Hermite Curve (OpenGL)</h2>
