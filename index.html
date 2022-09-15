@@ -1,0 +1,348 @@
+<!DOCTYPE HTML>
+<!--
+	Peter's website
+
+	Theme:
+	Strata by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Peter Caruana</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" type="image/png" href="icons/hand_icon.png"/>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+					<h1><strong>Peter Caruana</strong></h1>
+					<br />
+					<h2>
+					Masters Candidate at York University <br />
+					Research focuses: Vision and perception for virtual pedestrians, virtual agent behaviour, visual attention models and metrics  </h2>
+				</div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="about">
+						<header class="major">
+							<h2>ABOUT ME</h2>
+						</header>
+						<p>Hello!</p>
+						<p>I am a researcher and Masters candidate focusing on vision and perception for virtual humans at the <a href="https://gamay.lab.yorku.ca/" target="_blank">Graphics and  Media at York (GaMaY) Lab</a> at York University in Toronto, Ontario, Canada, under the supervision of Dr. Petros Faloutsos. 
+							I am also an external collaborator with the <a href="https://onlineacademiccommunity.uvic.ca/gaidglab/" target="_blank">Graphics, Artificial Intelligence, Design, and Games(GAIDG) Lab</a> at the University of Victoria in Victoria, British Columbia, Canada, as well at the Intelligent Visual Interfaces Lab at <a href="https://www.researchwithrutgers.com/en/publications/modelling-distracted-agents-in-crowd-simulations" target="_blank">Rutgers University</a> in New Jersey, USA.
+						<p>I am personally interested in integrating visual attention models and techniques into virtual human simulation.</p>
+<!--
+						<ul class="actions">
+							<li><a href="docs/Shanaathanan_Modchalingam_Resume.pdf" target="_blank" class="button">View Resume</a></li>
+							<li><a href="docs/ShanaaCV.pdf" target="_blank" class="button">View full academic CV</a></li>
+						</ul>
+						-->
+					</section>
+
+				<!-- Two -->
+					<section id="work">
+						<header class="major">
+							<h2>RECENT WORK</h2>
+						</header>
+						<div class="row">
+							<h2>Parametric Saliency Maps</h2>
+							<p>The focus of my masters thesis was a framework for incorporating distracted pedestrians into crowd simulations in Unity (C#) and later was ported to Unreal Engine 4. The Predictive Avoidance Model (PAM) is used as a steering algorithm with distracted behaviour layered on top using behaviour trees.</p>
+							<p>Methodologies used: Unreal Engine 4 (blueprints and C++) and Unity (C#), software prototyping, usability testing, experiment piloting.</p>
+
+							<article class="col-12 col-12-small work-item">
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/fulls/distracted-sim.jpg" alt="Distracted Pedestrians" />
+							</article>
+							
+							<p>Below is a video showcasing a dynamic octree implementation to speed up neighbour search, which is a bottleneck in our algorithm. It is implemented almost entirely in C++. In order to work around Unreal's poor C++ documentation, I frequently consulted and searched through engine code. It supports 3D neighbour search. An octree could also be used to allow pathfinding in 3D. Note that performance is impacted by the recording software as well as the age of my laptop, which is several years old at the time of recording. On this machine, the octree implementation led to a 25% increase in performance compared to our previous sphere trace approach. On a modern machine, we can simulate up to 2000 agents before performance drops. Further optimization is still in progress.</p>
+
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/mVXNYRkGnXg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>
+							<p>If your browser does not support embedded videos, <a href="https://youtu.be/mVXNYRkGnXg" target="_blank">click here</a> to view on YouTube.</p>
+							
+
+							<h2>Crowd Generation Tool (Unity)</h2>
+							<p>An editor tool I implemented in Unity to help the research team generate crowds. It includes functionality for generating agents, saving data and statistics, loading previously recorded simulations, and more.</p>
+							<p>Methodologies used: Unity (C#), human-focused design, usability testing</p>
+
+							<article class="col-12 col-12-small work-item">
+									<img style = "border-radius: 7px; margin-left: 15px;"
+									src="images/fulls/crowd-tool.PNG" alt="Crowd Generation Tool" 
+									width="394" 
+									height="542" />
+							</article>
+
+
+							<h2>Visual Attention For Virtual Pedestrians</h2>
+							<p>A probabilistic visual attention system for virtual agents. Attention distribution over the visual field is encoded into a 2D texture, which can then be sampled at runtime and used to drive agent choices. The textures are generated by convolving two gaussians, one in the horizontal direction of the visual field, and one across distance from the viewer.</p>
+							<p>Methodologies used: Unity (C#), software prototyping, usability testing, experiment piloting</p>
+							
+							<article class="col-12 col-12-small work-item">
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/fulls/visual-textures.PNG" alt="Visual Attention Field" />
+							</article>
+
+							<h2>Parametric Saliency Maps for Virtual Agents </h2>
+							<p>Visual attention and saliency system for virtual agents implemented as a shader (HLSL) in Unity, using the visual attention textures from the previous project to modulate saliency across the visual field.</p>
+							<p>Methodologies used: Unity (C#),  software prototyping, usability testing, experiment piloting</p>
+
+							<article class="col-12 col-12-small work-item">
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/fulls/PSM-factors.PNG" alt="Virtual Saliency" />
+							</article>
+							<article class="col-12 col-12-small work-item">
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/fulls/PSM-visual.PNG" alt="Visual Attention Modulated Virtual Saliency" />
+							</article>
+
+							<h2>Car following Hermite Curve (OpenGL)</h2>
+							<p>Implementation of a hermite curve-driven vehicle in C++ and OpenGL.</p>
+							
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/S35wwcAORFw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							<p>If your browser does not support embedded videos, <a href="https://youtu.be/S35wwcAORFw" target="_blank">click here</a> to view on YouTube.</p>
+							
+							<h2>Spring Mass Particle System (OpenGL)</h2>
+							<p>Spring mass particle system with ground repulsion forces in C++ and OpenGL. Supports Euler, Symplectic, and Verlet integration.</p>
+							
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/r-kUX048JX4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>
+							<p>If your browser does not support embedded videos, <a href="https://youtu.be/r-kUX048JX4" target="_blank">click here</a> to view on YouTube.</p>
+							
+							<h2>Inverse Kinematics System (OpenGL)</h2>
+							<p>Implementation of an inverse kinematic system in C++ and OpenGL.</p>
+							
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/oY5GM8l4aFY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>
+							<p>If your browser does not support embedded videos, <a href="https://youtu.be/oY5GM8l4aFY" target="_blank">click here</a> to view on YouTube.</p>
+							
+							
+							<h2>Action RPG (Unreal Engine)</h2>
+							<p>A personal project currently in progress in Unreal Engine (blueprints and C++). Artistic elements come from the marketplace or other online stores, while the majority of the logic is implemented myself. It includes many systems including a time and calendar system driving day/night cycle (in village scene), combat, abilities via the Gameplay Ability System, dialogue, inventory, shops, crafting, mounts, and many others.</p>							
+							<iframe src="https://drive.google.com/file/d/1fwwrOUTGhQ3vPZ_BDQ88cMZWehmBS3o8/preview" width="640" height="480" allow="autoplay"></iframe>
+							<p>If your browser does not support embedded videos, <a href="https://drive.google.com/file/d/1fwwrOUTGhQ3vPZ_BDQ88cMZWehmBS3o8/view?usp=sharing" target="_blank">click here</a> to view on Google Drive.</p>
+							
+						</div>
+						<!-- 
+						<ul class="actions">
+							<li><a href="#" class="button">Full Portfolio</a></li>
+						</ul>
+						-->
+					</section>
+
+					
+					<section id="academics">
+						<header class="major">
+							<h2>ACADEMICS</h2>
+						</header>
+						<h2><i class="fas fa-graduation-cap"></i> Education</h2>
+						<div class="box alt">
+							<div class="grid">
+								<div class="left-g-sml"><img src="icons/YorkU_full_icon.png" alt="" /></div>
+								<div class="right-g">
+									<h3>PhD Candidate - Computer Science - Computer Graphics</h3>
+									<h4>September 2020 - Present</h4>
+									<h4>York University, Toronto, Ontario, Canada</h4>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="left-g-sml"><img src="icons/YorkU_full_icon.png" alt="" /></div>
+								<div class="right-g">
+									<h3>MSc - Computer Science - Computer Graphics</h3>
+									<h4>September 2018 - August 2020</h4>
+									<h4>York University, Toronto, Ontario, Canada</h4>
+								</div>
+							</div>
+						</div>
+						
+						<h3><i class="courses"></i>Selected Courses</h3>
+						<div class="table-wrapper">
+							<table>
+								<tbody>
+									<tr>
+										<td><i>Design and Analysis of Algorithms</i> + <i>Advanced Algorithm Design</i></td>
+										<td>Study of algorithms for optimization and efficiency.</td>
+									</tr>
+									<tr>
+										<td><i>Introduction to 3D Computer Graphics</i> + <i>Advanced Image Synthesis</i></td>
+										<td>Knowledge of the graphics pipeline and advanced shader programming using OpenGL.</td>
+									</tr>
+									<tr>
+										<td><i>Simulation and Animation for Computer Games</i></td>
+										<td>Hermite and bezier curves, particle systems using verlet or other integration methods, Jacobian matrices and inverse kinematics. Implemented in C++ and OpenGL.</td>
+									</tr>
+									<tr>
+										<td><i>Data Mining</i> + <i>Machine Learning Theory</i></td>
+										<td>Hands-on machine learning using WEKA as well as theoretical proofs.</td>
+									</tr>
+									<tr>
+										<td><i>Computer Accessibility and Assistive Technology</i></td>
+										<td>Accessible and intuitive UI and technology design.</td>
+									</tr>
+									<tr>
+										<td><i>Software Testing</i></td>
+										<td>Test-driven design (TDD) and automated testing.</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
+						<h2><i class="fas fa-pencil-ruler"></i> Expertise</h2>
+						<div class="table-wrapper">
+							<table>
+								<tbody>
+									<tr>
+										<td>Research and Domain Knowledge</td>
+										<td>Simulation, Agent behaviour, Computer Graphics, Machine Learning</td>
+									</tr>
+									<tr>
+										<td>Languages</td>
+										<td>Unreal Engine (Blueprints + C++), Unity (C#), OpenGL, Shader programming (HLSL), Python (PyTorch, TensorFlow, Pandas, Numpy, SciPy), R, Java, Javascript, Flutter</td>
+									</tr>
+									<tr>
+										<td>Software</td>
+										<td>Unreal Engine, Unity, Autodesk Maya, Blender, VRoid Studio</td>
+									</tr>
+									<tr>
+										<td>Platforms</td>
+										<td>Windows, Linux, Android, Github, AWS</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+<!--
+						<h2><i class="fas fa-award"></i> Fellowships & Awards</h2>
+						<div class="box alt">
+							<div class="grid">
+								<div class="left-g-sml"><img src="icons/NSERC_RGB.png" alt="" /></div>
+								<div class="right-g">
+									<h3>National Science and Engineering Research Council of Canada Postgraduate Scholarship - Doctoral</h3>
+									<h4>September 2020 - August 2022</h4>
+									<h4>York University, Toronto, Ontario, Canada</h4>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="left-g-sml"><img src="icons/VISTA1.png" alt="" /></div>
+								<div class="right-g">
+									<h3>Vision: Science to Applications (VISTA) - Doctoral Award</h3>
+									<h4>September 2018 - August 2022</h4>
+									<h4>York University, Toronto, Ontario, Canada</h4>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="left-g-sml"><img src="icons/NSERC_RGB.png" alt="" /></div>
+								<div class="right-g">
+									<h3>National Science and Engineering Research Council of Canada - Brain in Action International Research Training Group - Doctoral Scholarship</h3>
+									<h4>September 2018 - August 2021</h4>
+									<h4>York University, Toronto, Ontario, Canada</h4>
+								</div>
+							</div>
+						</div>
+
+						<h2><i class="fab fa-slideshare"></i> Community Involvement</h2>
+						<div class="box alt">
+							<div class="grid">
+								<div class="left-g-sml"><img src="icons/VISTA1.png" alt="" ></div>
+								<div class="right-g">
+									<h3>Vision: Science to Applications (VISTA) - Leadership Committee</h3>
+									<h4>Voting Member - Trainee Representative</h4>
+									<h4>May 2020 - Present</h4>
+									<h4>York University, Toronto, Ontario, Canada</h4>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="left-g-sml"><img src="icons/CVR.png" alt="" ></div>
+								<div class="right-g">
+									<h3>Centre for Vision Research (CVR) - Steering Committee</h3>
+									<h4>Voting Member - Trainee Representative</h4>
+									<h4>September 2020 - December 2021</h4>
+									<h4>York University, Toronto, Ontario, Canada</h4>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="left-g-sml"><img src="icons/NMA.png" alt="" ></div>
+								<div class="right-g">
+									<h3>Neuromatch Academy</h3>
+									<h4>Volunteer Organizer - Support</h4>
+									<h4>July 2021</h4>
+								</div>
+							</div>
+							<div class="grid">
+								<div class="left-g-sml"><img src="icons/CVR.png" alt="" ></div>
+								<div class="right-g">
+									<h3>Centre for Vision Research (CVR) - Communications Committee</h3>
+									<h4>Member</h4>
+									<h4>May 2020 - April 2021</h4>
+									<h4>York University, Toronto, Ontario, Canada</h4>
+								</div>
+							</div>
+						</div>
+						-->
+					</section>
+					
+		
+				<!-- Three -->
+					<section id="three">
+						<h2>GET IN TOUCH</h2>
+						<p>If you have any inquiries, please don't hesitate to contact me.</p>
+						<div class="row">
+							<!--
+							<div class="col-8 col-12-small">
+								<form method="post" action="#">
+									<div class="row gtr-uniform gtr-50">
+										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
+										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
+										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+									</div>
+								</form>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</div>
+							-->
+							<div class="col-4 col-12-small">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+										<a href="mailto:mCaruana@live.ca">mCaruana@live.ca</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="https://scholar.google.com/citations?hl=en&authuser=1&user=AUeIsekAAAAJ" target="_blank" class="icon brands fa-google"><span class="label">Google Scholar</span></a></li>
+						<!--<li><a href="https://www.linkedin.com/in/shanaa-modchalingam-97671030/" target="_blank" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>-->
+						<li><a href="https://github.com/CaruanaM" target="_blank" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="mailto:mCaruana@live.ca" target="_blank" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Peter Caruana</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
+						<li>Hand icon: <a href="https://www.freepik.com" target="_blank" >Freepik</a> from <a href="https://www.flaticon.com/" target="_blank">www.flaticon.com</a></li>
+						<li>Header image: rawpixel.com from <a href="https://www.freepik.com/vectors/pattern" target="_blank">www.freepik.com</a></li>
+					</ul>					
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
