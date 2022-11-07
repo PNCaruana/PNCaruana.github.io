@@ -24,12 +24,12 @@
 					<h1><strong>Peter Caruana, MSc</strong></h1>
 					<br />
 					<h2>
-					Computer Science Researcher<br />
+					Also a 3D artist...<br />
 					</h2>
-					<h1><strong>Research interests: </strong></h1 > 
+					<h1><strong>Types of work: </strong></h1 > 
 					<br/>
 					<h2>
-					Vision and perception for virtual pedestrians, virtual agent behaviour, visual attention models and metrics  
+					Asset modeling, Texturing (Procedural and Classical), ArchVis, Scene Design  
 					</h2>
 				</div>
 			</header>
@@ -40,9 +40,9 @@
 				<!-- One -->
 					<section id="about">
 						<header class="major">
-							<h2>Portfolio</h2>
+							<h2>Blender 3D Portfolio</h2>
 						</header>
-						<p>Here is some selected examples of scenes/renders I have done in Blender. I do modeling, scene design, materials etc.</p>
+						<p>Here is some selected examples of scenes/renders I have done in Blender. I do modeling, scene design, materials etc. My workflow also includes finding and using pre-made assets where appropriate, particularly when doing ArchVis projects</p>
 <!--
 						<ul class="actions">
 							<li><a href="docs/Shanaathanan_Modchalingam_Resume.pdf" target="_blank" class="button">View Resume</a></li>
@@ -54,86 +54,54 @@
 				<!-- Two -->
 					<section id="work">
 						<header class="major">
-							<h2>RECENT WORK</h2>
+							<h2>ArchVis</h2>
 						</header>
 						<div class="row">
-							<h2>Parametric Saliency Maps for Autonomous Pedestrians</h2>
-							<p>The focus of my masters thesis was a framework for generating "psuedo" saliency maps in Unity (C#). The parametric model is implemented in a shader (HLSL), which incorporates 7 attention factors in order to generate 2D saliency maps in runtime from the perspective of a virtual agent.</p>
-							<p>Methodologies used: Unity (C#), software prototyping, parameter optimization, usability testing, experiment piloting.</p>
-
+							<h2>Study in kitchen design</h2>
+							<p>All assets, materials, scene design were done from scratch. I was trying to experiment with lighting and reflections to create a vibrant and photoreal scene. Additionally, all materials were done procedurally within blender nodes. Rendered in Cycles</p>
 							<article class="col-12 col-12-small work-item">
 									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/fulls/PSM-factors.PNG" alt="Virtual Saliency" />
-							</article>
-							<article class="col-12 col-12-small work-item">
-									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/fulls/PSM-visual.PNG" alt="Visual Attention Modulated Virtual Saliency" />
-							</article>
-							<article class="col-12 col-12-small work-item">
-								<iframe width="560" height="315" src="https://www.youtube.com/embed/nLWf_sHYrxU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>
-								<p>If your browser does not support embedded videos, <a href="https://youtu.be/nLWf_sHYrxU" target="_blank">click here</a> to view on YouTube.</p>
+									src="images/renders/KitchenRender.png" alt="kitchen" />
 							</article>
 							
 							
-							<p> Below are results from optimizing the parametric saliency maps model to more closely resemble SALICON, a state of the art saliency model. Optimization was done using the CMA-ES algorithm. Three loss functions were experimented with across three objective functions (9 objective/loss pairs), based on saliency metrics of SIM score and KL-Divergence which measure the similarity of distributions and are a good co-pair of metrics due to complementary features. Points represent comparisons between pairs of generated parametric saliency maps and generated SALICON saliency maps. Orange points are like-pairs, corresponding to the same visual input. Blue points are unlike-pairs. Optimization resulted in clear strong separability of like-pairs from unlike-pairs, despite the parametric model having only 7 degrees of freedom. Interestingly, even the unoptimized baseline shows some inherent structural differences of like-pairs from unlike-pairs, which suggests the choice of attention parameters themselves encode a good deal of what machine learning trained models are encoding. Further investigation would be needed to confirm this.
-							</p>
+							<h2>Study in real scale living space design</h2>
+							<p>Before moving into my appartment last year, I made a mockup of the appartment space to its exact design specs. I then used scale assets (mix of original and premade) of my furnature to see how everything would fit together. The result was shockingly accurate once I had actually moved in.</p>
 							
 							<article class="col-12 col-12-small work-item">
 									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/fulls/SVM-Plot-(Baseline).png" alt="Basline" />
-							</article>
-							<article class="col-12 col-12-small work-item">
+									src="images/renders/Atkinson_1.png" alt="appt" />
+									
 									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/fulls/SVM-Plot-(KL-SIM-SRMS).png" alt="Optimized" />
+									src="images/renders/Atkinson_2.png" alt="appt" />
+									
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/Atkinson_3.png" alt="appt" />
+									
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/AtkinsonRender1.png" alt="appt" />
 							</article>
 							
 							
 							
-							<!--
-							<h2>Crowd Generation Tool (Unity)</h2>
-							<p>An editor tool I implemented in Unity to help the research team generate crowds. It includes functionality for generating agents, saving data and statistics, loading previously recorded simulations, and more.</p>
-							<p>Methodologies used: Unity (C#), human-focused design, usability testing</p>
-
-							<article class="col-12 col-12-small work-item">
-									<img style = "border-radius: 7px; margin-left: 15px;"
-									src="images/fulls/crowd-tool.PNG" alt="Crowd Generation Tool" 
-									width="394" 
-									height="542" />
-							</article>
-
-
-							<h2>Visual Attention For Virtual Pedestrians</h2>
-							<p>A probabilistic visual attention system for virtual agents. Attention distribution over the visual field is encoded into a 2D texture, which can then be sampled at runtime and used to drive agent choices. The textures are generated by convolving two gaussians, one in the horizontal direction of the visual field, and one across distance from the viewer.</p>
-							<p>Methodologies used: Unity (C#), software prototyping, usability testing, experiment piloting</p>
+							<h2>Comissioned Work (University Space)</h2>
+							<p>I was commised to help visualize a possible addition to one of the spaces at my universities engineering building. I recreated the space from measurements and references. The task was to experiment with potential pieces of furnature, wall murals and carpeting. Given sources I recreated all assets and materials, then rendered them out.</p>
 							
 							<article class="col-12 col-12-small work-item">
 									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/fulls/visual-textures.PNG" alt="Visual Attention Field" />
-							</article>
-							-->
-							<article class="col-12 col-12-small work-item">
-							<h2>Tank following Hermite Spline, Rocket Tracking (OpenGL)</h2>
-							<p>Implementation of a hermite curve-driven vehicle in C++ and OpenGL.</p>
-							
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/8ORY_VIQIGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							<p>If your browser does not support embedded videos, <a href="https://youtu.be/8ORY_VIQIGQ" target="_blank">click here</a> to view on YouTube.</p>
-							</article>
-							
-							<article class="col-12 col-12-small work-item">
-							<h2>Spring Mass Particle System (OpenGL)</h2>
-							<p>Spring mass particle system with ground repulsion forces in C++ and OpenGL. Supports Euler, Symplectic, and Verlet integration.</p>
-							
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/cmiqp3tLg2E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							<p>If your browser does not support embedded videos, <a href="https://youtu.be/cmiqp3tLg2E" target="_blank">click here</a> to view on YouTube.</p>
+									src="images/renders/bergeronrender_00.jpg" alt="berg" />
+									
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/bergeronrender_01.jpg" alt="berg" />
+									
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/bergeronrender_02.jpg" alt="berg" />
+									
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/bergeronrender_03.png" alt="berg" />
 							</article>
 							
-							<article class="col-12 col-12-small work-item">
-							<h2>Inverse Kinematics System (OpenGL)</h2>
-							<p>Implementation of an inverse kinematic system in C++ and OpenGL.</p>
-							
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/smkOL24fhRE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-							<p>If your browser does not support embedded videos, <a href="https://youtu.be/smkOL24fhRE" target="_blank">click here</a> to view on YouTube.</p>
-							</article>
+						
 							<!--
 							<h2>Action RPG (Unreal Engine)</h2>
 							<p>A personal project currently in progress in Unreal Engine (blueprints and C++). Artistic elements come from the marketplace or other online stores, while the majority of the logic is implemented myself. It includes many systems including a time and calendar system driving day/night cycle (in village scene), combat, abilities via the Gameplay Ability System, dialogue, inventory, shops, crafting, mounts, and many others.</p>							
@@ -148,223 +116,42 @@
 						-->
 					</section>
 
-					<section id="papers">
+					<section id="models">
 					<header class="major">
-							<h2>Papers and Reports</h2>
+							<h2>Asset Modeling</h2>
 						</header>
-						<h2>Publications</h2>
-						<div class="box alt">
-							<div class="grid">
-								<div class="right-g">
-									<h3 ><a href="docs/Thesis(2.2).pdf">Pseudo-Saliency for Human Gaze Simulation</a></h3>
-									<h4>September 2022</h4>
-									<h4>Master's Thesis, York University</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="right-g">
-									<h3 ><a href="https://www.sciencedirect.com/science/article/abs/pii/S0097849322000486">Automatic estimation of parametric saliency maps (PSMs) for autonomous pedestrians</a></h3>
-									<h4>May 2022</h4>
-									<h4>Computers & Graphics 104</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="right-g">
-									<h3 ><a href="https://dl.acm.org/doi/abs/10.1145/3487983.3488299">PSM: Parametric Saliency Maps for Autonomous Pedestrians</a></h3>
-									<h4>November 2021</h4>
-									<h4>Motion, Interaction and Games Conference</h4>
-								</div>
-							</div>
-						</div>
 						
-						<h2>Graduate Coursework</h2>
-						<div class="box alt">
-							<div class="grid">
-								<div class="right-g">
-									<h3 ><a href="docs/MenuEval.pdf">Evaluating Search and Selection Times for Linear, Grid, and Radial GUI Menus</a></h3>
-									<h4>December 2020</h4>
-									<h4>Research Methods for Human Computer Interaction</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="right-g">
-									<h3 ><a href="docs/MotionClassification.pdf">Human Motion State Classification from Motion Capture Data</a></h3>
-									<h4>April 2021</h4>
-									<h4>Data Analytics and Visualization</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="right-g">
-									<h3 ><a href="docs/SameDiff.pdf">Object Feature Mapping and View Prediction from Same-Different Determiniation of 3D Polyhedrons</a></h3>
-									<h4>April 2021</h4>
-									<h4>Advanced Topics in Computer Vision</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="right-g">
-									<h3 ><a href="docs/NeuralPoseTransfer.pdf">Reproducibility Study: Neural Pose Transfer by Spatially Adaptive Instance Normalization</a></h3>
-									<h4>April 2021</h4>
-									<h4>Neural Networks and Deep Learning</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="right-g">
-									<h3 ><a href="docs/RandomLabels.pdf">What Do Neural Networks Learn When Trained With Random Labels? (Paper Report)</a></h3>
-									<h4>December 2020</h4>
-									<h4>Machine Learning Theory</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-						</div>
-					</section>
-					
-					<section id="academics">
-						<header class="major">
-							<h2>ACADEMICS</h2>
-						</header>
-						<h2><i class="fas fa-graduation-cap"></i> Education</h2>
-						<div class="box alt">
-							<div class="grid">
-								<div class="left-g-sml"><img src="icons/YorkU_full_icon.png" alt="" /></div>
-								<div class="right-g">
-									<h3>MSc - Computer Science - Computer Graphics</h3>
-									<h4>September 2020 - September 2022</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="left-g-sml"><img src="icons/YorkU_full_icon.png" alt="" /></div>
-								<div class="right-g">
-									<h3>BSc with Honours, Double Major - Computer Science & Physics</h3>
-									<h4>September 2015 - April 2020</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-						</div>
-						
-						<h3><i class="courses"></i>Selected Courses</h3>
-						<div class="table-wrapper">
-							<table>
-								<tbody>
-									<tr>
-										<td><i>Neural Networks and Deep Learning (A)</i> &nbsp;  & &nbsp; <i>Machine Learning Theory (A+)</i></td>
-										<td>Surveyed theory and practice of deep learning and Neural Networks; automatic differentiation, normalization, residual blocks, attention, model selection, validation. Replicated results of published study.</td>
-									</tr>
-									<tr>
-										<td><i>Advanced Topics in Computer Vision (A-)</i></td>
-										<td>Studied advanced computer vision topics, with focus on active vision and visual attention.</td>
-									</tr>
-									<tr>
-										<td><i>Simulation and Animation for Computer Games (A+)</i></td>
-										<td>Hermite and bezier curves, particle systems using verlet and/or other integration methods, Jacobian matrices and inverse kinematics. Implemented in C++ and OpenGL.</td>
-									</tr>
-									<tr>
-										<td><i>Research Methods for Human Computer Interaction (A)</i></td>
-										<td>Advanced concepts and technologies for human computer interaction research. Designed and conducted user study to evaluate user interfaces.</td>
-									</tr>
-									<tr>
-										<td><i>Data Analytics and Visualization (A)</i></td>
-										<td>Hands-on machine learning using WEKA, data analysis methods.</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						
-						<h2><i class="fas fa-pencil-ruler"></i> Expertise</h2>
-						<div class="table-wrapper">
-							<table>
-								<tbody>
-									<tr>
-										<td>Research and Domain Knowledge</td>
-										<td>Simulation, Computer Graphics, Machine Learning, Computer Vision, Visual Attention</td>
-									</tr>
-									<tr>
-										<td>Languages</td>
-										<td>Unity (C#), Python (PyTorch, Pandas, Numpy, SciPy), C++, R, OpenGL </td>
-									</tr>
-									<tr>
-										<td>Software</td>
-										<td>Unity, Blender, Unreal Engine 4, Autodesk Motion Builder</td>
-									</tr>
-									<tr>
-										<td>Platforms</td>
-										<td>Windows, Linux, Android, Github</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-<!--
-						<h2><i class="fas fa-award"></i> Fellowships & Awards</h2>
-						<div class="box alt">
-							<div class="grid">
-								<div class="left-g-sml"><img src="icons/NSERC_RGB.png" alt="" /></div>
-								<div class="right-g">
-									<h3>National Science and Engineering Research Council of Canada Postgraduate Scholarship - Doctoral</h3>
-									<h4>September 2020 - August 2022</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="left-g-sml"><img src="icons/VISTA1.png" alt="" /></div>
-								<div class="right-g">
-									<h3>Vision: Science to Applications (VISTA) - Doctoral Award</h3>
-									<h4>September 2018 - August 2022</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="left-g-sml"><img src="icons/NSERC_RGB.png" alt="" /></div>
-								<div class="right-g">
-									<h3>National Science and Engineering Research Council of Canada - Brain in Action International Research Training Group - Doctoral Scholarship</h3>
-									<h4>September 2018 - August 2021</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-						</div>
-
-						<h2><i class="fab fa-slideshare"></i> Community Involvement</h2>
-						<div class="box alt">
-							<div class="grid">
-								<div class="left-g-sml"><img src="icons/VISTA1.png" alt="" ></div>
-								<div class="right-g">
-									<h3>Vision: Science to Applications (VISTA) - Leadership Committee</h3>
-									<h4>Voting Member - Trainee Representative</h4>
-									<h4>May 2020 - Present</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="left-g-sml"><img src="icons/CVR.png" alt="" ></div>
-								<div class="right-g">
-									<h3>Centre for Vision Research (CVR) - Steering Committee</h3>
-									<h4>Voting Member - Trainee Representative</h4>
-									<h4>September 2020 - December 2021</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="left-g-sml"><img src="icons/NMA.png" alt="" ></div>
-								<div class="right-g">
-									<h3>Neuromatch Academy</h3>
-									<h4>Volunteer Organizer - Support</h4>
-									<h4>July 2021</h4>
-								</div>
-							</div>
-							<div class="grid">
-								<div class="left-g-sml"><img src="icons/CVR.png" alt="" ></div>
-								<div class="right-g">
-									<h3>Centre for Vision Research (CVR) - Communications Committee</h3>
-									<h4>Member</h4>
-									<h4>May 2020 - April 2021</h4>
-									<h4>York University, Toronto, Ontario, Canada</h4>
-								</div>
-							</div>
-						</div>
-						-->
+						<article class="col-12 col-12-small work-item">
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/MythicBow.png" alt="appt" />
+									
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/MythicBow2.png" alt="appt" />
+									
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/Sword Render.png" alt="appt" />
+									
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/SwordRenderMk2.png" alt="appt" />
+									
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/Mat-49.png" alt="appt" />
+									
+									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/Deadmau5 Render.png" alt="appt" />
+							</article>
+							
+							<h1>Animations</h1>
+							
+							<video  width="800" height="450" controls loop>
+								<source  src="images/renders/Deadmau5_video.mp4" type="video/mp4">
+								your browser does not support videos
+							</video>
+							
+							<video  width="800" height="800" controls loop>
+								<source  src="images/renders/portal.mp4" type="video/mp4">
+								your browser does not support videos
+							</video>
 					</section>
 					
 		
