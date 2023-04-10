@@ -3357,8 +3357,8 @@ input, select, textarea {
 .modal-content {
   margin: auto;
   display: block;
-  width: 130%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1000px;
 }
 
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
