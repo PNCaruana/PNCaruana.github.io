@@ -18,14 +18,7 @@
 	
 	<script>
 					
-						var hoverItemId;
 						
-						document.addEventListener('click', function(e){
-							if(hoverItemId != e.target.id){
-								console.log("hovering over " + hoverItemId);
-							}
-							hoverItemId = e.target.id;
-						});
 						
 						window.onload = function(){
 							var images = document.getElementsByTagName('img');
@@ -210,7 +203,6 @@
 						<!-- Modal Content (The Image) -->
 						<img class="modal-content" id="modal-content" src="images/renders/KitchenRender.png">
 						<!-- Modal Caption (Image Text) -->
-						<div id="caption">yela habibi</div>
 					</div>
 					
 				<!-- Three -->
