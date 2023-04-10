@@ -15,6 +15,54 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="shortcut icon" type="image/png" href="icons/hand_icon.png"/>
 	</head>
+	
+	<script>
+					
+						var hoverItemId;
+						
+						document.addEventListener('click', function(e){
+							if(hoverItemId != e.target.id){
+								console.log("hovering over " + hoverItemId);
+							}
+							hoverItemId = e.target.id;
+						});
+						
+						window.onload = function(){
+							var images = document.getElementsByTagName('img');
+			
+							// Loop through the images and add an onclick event to each one
+							for (var i = 0; i < images.length; i++) {
+								id = "img_" + i;
+								if(images[i].id != "modal-content"){
+									images[i].id = id;
+									images[i].onclick = function() {
+										modalOnclick(this.id);
+									};
+								}
+								
+							}
+							console.log("Ran onload function");
+						}
+						
+						
+						function modalOnclick(id){
+							console.log(id + " was clicked");
+							var modal = document.getElementById("myModal");
+							var img = document.getElementById(id)
+							var modalImg = document.getElementById("modal-content")
+							modal.style.display = "block";
+							isNull = modalImg==null;
+							console.log("is Null: " + isNull);
+							modalImg.src = img.src;
+							//captionText.innerHTML = img.alt;
+							
+							var span = document.getElementsByClassName("close")[0];
+							span.onclick = function(){ modal.style.display="none";}
+						}
+					
+						
+					</script>
+	
 	<body class="is-preload">
 
 		<!-- Header -->
@@ -60,8 +108,8 @@
 							<h2>Study in kitchen design</h2>
 							<p>All assets, materials, scene design were done from scratch. I was trying to experiment with lighting and reflections to create a vibrant and photoreal scene. Additionally, all materials were done procedurally within blender nodes. Rendered in Cycles</p>
 							<article class="col-12 col-12-small work-item">
-									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/renders/KitchenRender.png" alt="kitchen" />
+									<img id ="kitchenRender.png" style = "width: 80%; border-radius: 7px; margin-left: 15px;"
+									src="images/renders/KitchenRender.png" alt="kitchen" onclick="modalOnclick()"/>
 							</article>
 							
 							
@@ -70,16 +118,16 @@
 							
 							<article class="col-12 col-12-small work-item">
 									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/renders/Atkinson_1.png" alt="appt" />
+									src="images/renders/Atkinson_1.png" alt="appt" id="Atkinson_1.png" onclick="modalOnclick()"/>
 									
 									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/renders/Atkinson_2.png" alt="appt" />
+									src="images/renders/Atkinson_2.png" alt="appt" id="Atkinson_2.png"/>
 									
 									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/renders/Atkinson_3.png" alt="appt" />
+									src="images/renders/Atkinson_3.png" alt="appt" id="Atkinson_3.png"/>
 									
 									<img style = "width: 80%; border-radius: 7px; margin-left: 15px;"
-									src="images/renders/AtkinsonRender1.png" alt="appt" />
+									src="images/renders/AtkinsonRender1.png" alt="appt" id="AtkinsonRender1.png"/>
 							</article>
 							
 							
@@ -154,7 +202,17 @@
 							</video>
 					</section>
 					
-		
+					<!--Modals-->
+					<div id="myModal" class="modal">
+
+						<!-- The Close Button -->
+						<span class="close">&times;</span>
+						<!-- Modal Content (The Image) -->
+						<img class="modal-content" id="modal-content" src="images/renders/KitchenRender.png">
+						<!-- Modal Caption (Image Text) -->
+						<div id="caption">yela habibi</div>
+					</div>
+					
 				<!-- Three -->
 					<section id="three">
 						<h2>GET IN TOUCH</h2>
@@ -187,6 +245,7 @@
 
 			</div>
 
+		
 		<!-- Footer -->
 			<footer id="footer">
 				<div class="inner">
